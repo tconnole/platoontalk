@@ -71,15 +71,18 @@ PlatoonTalk creates a simple and secure application for dissemenating Organizati
 # C4 Models
 
 Attached below is a link to an interactive view of current C4 Modeling of System, Container, Component views. User advice is to make sure the tags view is on (Bottom of the page). This provides color key and highlighting of technologies used for each system, container, component and connections.
-https://s.icepanel.io/AZcBfSNRmyLMNx/CtWw
+
+[IcePanel Interactive C4 Diagrams](https://s.icepanel.io/AZcBfSNRmyLMNx/CtWw)
 
 Another viewing option is to view the PDF file version with descriptions titled "PlatoonTalk C4 Diagrams.pdf" stored in the file Supporting Information Folder.
 
+[PDF PlatoonTalk C4 Diagrams](https://github.com/hutfljo84/PlatoonTalk/blob/main/Supporting%20Information/PlatoonTalk%20C4%20Diagrams.pdf)
+
 # Mockups
 
- ![PlatoonTalk Mocks](../PlatoonTalkMocks.pdf)
- 
 PlatoonTalk Mockups can be viewed by looking in the Supporting Information folder and selecting "PlatoonTalkMocks.pdf"
+
+[PDF PlatoonTalk Mocks](https://github.com/hutfljo84/PlatoonTalk/blob/main/Supporting%20Information/PlatoonTalkMocks.pdf)
 
 # License
 
