@@ -2,9 +2,22 @@
 
 PlatoonTalk creates a simple and secure application for dissemenating Organization updates, personnel information, and commonly used resources when other methods are not suitable. PlatoonTalk Provides a simple to use bulletin board system for alerting organization members of new information by SMS. PlatoonTalk also stores member data for quick viewing in continually changing team environments. Files can be hosted for centralized easy access to support organizational demands.
 
-# Installation
+# Prototype-Installation
+1. Clone the repo to local desktop.
+2. run npx prisma generate
+3. In root directory run docker-compose build
+4. Run docker-compose up
+5. Run npx prisma migrate dev
+6. Check http://localhost:4310/api to see that the backend is running
+7. Check http://localhost:4201 to see the front-end is running
 
-# Getting Started
+
+# Prototype-Getting Started
+1.  Navigate to http://localhost:5556. Here in prisma schema you can add data to your models.
+2.  using postman make Postman GET request to https:localhost:4310/api/products "Currently Broken"
+3.  using postman make a Postman GET request to https:localhost:4310/api/roster " Currently Broken"
+
+**NOTE** GET request were previously working but are now broken with 500 internal database issues.
 
 # Use Cases
 
