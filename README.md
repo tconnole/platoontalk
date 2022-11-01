@@ -24,15 +24,26 @@ PlatoonTalk creates a simple and secure application for dissemenating Organizati
 # Use Cases
 
 1. As a **manager/admin**, I want to **make a post** so I can **update the organization**.
+   - AC: Manager/Admin can make posts
 2. As a **manager/admin**, I want to **edit rosters** so I can **maintain personnel assingments**.
+   - AC: Manager/Admin can edit rosters
 3. As a **admin**, I want to **upload files** so I can **provide new materials**.
+   - AC: Admin can upload files
 4. As a **user**, I want to **register** so I can **use PlatoonTalk**.
+   - AC: User can register
 5. As a **user**, I want to **navigate to a specific roster view** so I can **view a specific roster query**.
+   - AC: User can navigate to roster view and view rosters
 6. As a **user**, I want to **navigate to a specific post view** so I can **view a specific post query**.
+   - AC: User can navigate to specific post via the url
 7. As a **user**, I want to **downlaod a document** so I can **use document**.
+   - AC: User can download file
 8. As a **manager**, I want to **edit a post** so I can **correct mistakes**.
+   - AC: Manager can edit a post
 9. As a **admin**, I want to **remove files** so I can **remove old files**.
+   - AC: Admin can remove files
 10. As a **manager**, I want to **send SMS on posts** so I can **give direct notification of information updates**.
+   - AC: Manager can trigger SMS when posts are made
+
 
 # Mis-use Cases
 
