@@ -5,16 +5,16 @@ PlatoonTalk creates a simple and secure application for dissemenating Organizati
 # Prototype-Installation
 
 1. Clone the repo to local desktop.
-2. Navigate to prisma directory 'run npx prisma generate'
-3. In root directory run 'docker-compose build'
-4. Run 'docker-compose up'
-5. Run 'docker exec -it platoontalk-backend-1 npx prisma migrate dev'
+2. Navigate to prisma directory ```run npx prisma generate```
+3. In root directory run ```docker-compose build```
+4. Run ```docker-compose up```
+5. Run ```docker exec -it platoontalk-backend-1 npx prisma migrate dev```
 6. Check http://localhost:4310/api to see that the backend is running
 7. Check http://localhost:4201 to see the front-end is running
 
 # Prototype-Getting Started
 
-1.  Start Prisma Studio by running 'docker exec -it platoontalk-backend-1 npx prisma studio'
+1.  Start Prisma Studio by running ```docker exec -it platoontalk-backend-1 npx prisma studio```
 2.  Navigate to http://localhost:5556. Here in prisma studio you can add data to your models.
 3.  using postman make Postman GET request to https:localhost:4310/api/products
 4.  using postman make a Postman GET request to https:localhost:4310/api/roster
