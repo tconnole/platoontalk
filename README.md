@@ -77,6 +77,8 @@ Another viewing option is to view the PDF file version with descriptions titled 
 
 # Mockups
 
+ ![PlatoonTalk Mocks](../PlatoonTalkMocks.pdf)
+ 
 PlatoonTalk Mockups can be viewed by looking in the Supporting Information folder and selecting "PlatoonTalkMocks.pdf"
 
 # License
