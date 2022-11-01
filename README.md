@@ -2,6 +2,12 @@
 
 PlatoonTalk creates a simple and secure application for dissemenating Organization updates, personnel information, and commonly used resources when other methods are not suitable. PlatoonTalk Provides a simple to use bulletin board system for alerting organization members of new information by email. PlatoonTalk also stores member data for quick viewing in continually changing team environments. Files can be hosted for centralized easy access to support organizational demands.
 
+# C4 Models
+Attached below is a link to an interactive view of current C4 Modeling of System, Container, Component views. User advice is to make sure the tags view is on (Bottom of the page). This provides color key and highlighting of technologies used for each system, container, component and connections.
+https://s.icepanel.io/AZcBfSNRmyLMNx/CtWw
+
+Another viewing option is to view the PDF file version with descriptions titled "PlatoonTalk C4 Diagrams" stored in the file root directory.
+
 # Installation
 
 # Getting Started
