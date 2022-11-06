@@ -16,7 +16,7 @@ model Product {
   sku         String
 }
 
-model Roster {
+model User {
   id          String @id @default(cuid())
   usergrp     Int
   sectionId   Int
@@ -29,4 +29,79 @@ model Roster {
   state       String
   postal      Int
   phone       Int
+  ftStaff     Int
+  createdAt   DateTime
+  updatedAt   DateTime
+
 }
+
+model Category {
+  id          String @id @default(cuid())
+  name        String
+  createdAt   DateTime
+  updatedAt   DateTime
+}
+
+model Post{
+  id          String @id @default(cuid())
+  title       String
+  content     String
+  createdAt   DateTime
+  updatedAt   DateTime
+}
+
+model Usergrp{
+  id          String @id @default(cuid())
+  name        String
+  description String
+  locked      Int
+  can_access  Int
+  can_access_cp Int
+  createdAt DateTime
+  updatedAt DateTime
+}
+
+model File{
+  id          String @id @default(cuid())
+  categoryid  Int
+  name  String
+  descriptions String
+  featrued  Int
+  createdAt DateTime
+  updatedAt DateTime
+  downloads Int
+
+}
+
+model Section{
+  id          String @id @default(cuid())
+  elementid Int
+  name  String
+  createdAt DateTime
+  updatedAt DateTime
+}
+
+model Element{
+  id          String @id @default(cuid())
+  name  String
+  createdAt DateTime
+  updatedAt DateTime
+}
+
+model Event{
+  id          String @id @default(cuid())
+  type  String
+  short_Description String
+  all_company String
+  headquarters  String
+  first_platoon String
+  sec_platoon String
+  third_platoon String
+  fourth_platoon  String
+  maintenance String
+  date_start  DateTime
+  date_end  DateTime
+  createdAt DateTime
+  updatedAt DateTime
+}
+
