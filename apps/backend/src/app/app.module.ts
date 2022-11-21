@@ -6,12 +6,28 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ProductController } from '../lib/products/product.controller';
 import { ProductService } from '../lib/products/product.service';
-import { RosterController } from '../lib/roster/roster.controller';
-import { RosterService } from '../lib/roster/roster.service';
+import { CategoryController } from '../lib/category/category.controller';
+import { CategoryService } from '../lib/category/category.service';
+import { UserService } from '../lib/user/user.service';
+import { UserController } from '../lib/user/user.controller';
+import { ElementController } from '../lib/element/element.controller';
+import { ElementService } from '../lib/element/element.service';
 
 @Module({
   imports: [],
-  controllers: [AppController, ProductController, RosterController],
-  providers: [AppService, ProductService, RosterService],
+  controllers: [
+    AppController,
+    ProductController,
+    CategoryController,
+    UserController,
+    ElementController,
+  ],
+  providers: [
+    AppService,
+    ProductService,
+    CategoryService,
+    UserService,
+    ElementService,
+  ],
 })
 export class AppModule {}
