@@ -1,14 +1,42 @@
-// libs/products/src/lib/section.controller.ts
+// libs/products/src/lib/products.controller.ts
 
-import { Controller, Get } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Param,
+  Post,
+  Body,
+  Put,
+  Delete,
+} from '@nestjs/common';
 import { SectionService } from './section.service';
+import { Section } from '@prisma/client';
 
 @Controller('section')
 export class SectionController {
-  constructor(private sectionService: SectionService) {}
+  constructor(private readonly sectionService: SectionService) {}
 
   @Get()
-  public getSection() {
+  async getAllSection(): Promise<Section[]> {
     return this.sectionService.getSection();
+  }
+
+  @Post()
+  async createSection(@Body() postData: Section): Promise<Section> {
+    return this.sectionService.createSection(postData);
+  }
+
+  @Get(':id')
+  async getSectionBy(@Param('id') id: number): Promise<Section | null> {
+    return this.sectionService.getSectionBy(id);
+  }
+
+  @Put(':id')
+  async Update(@Param('id') id: number): Promise<Section> {
+    return this.sectionService.updateSection(id);
+  }
+  @Delete(':id')
+  async Delete(@Param('id') id: number): Promise<Section> {
+    return this.sectionService.deleteSection(id);
   }
 }
