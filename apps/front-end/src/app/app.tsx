@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
+import * as React from 'react';
 import NxWelcome from './nx-welcome';
 
 export function App() {

@@ -20,7 +20,7 @@
     "@nestjs/platform-express": "^9.0.0",
     "@prisma/client": "^4.6.1",
     "core-js": "^3.6.5",
-    "react": "18.2.0",
+    "react": "^18.2.0",
     "react-dom": "18.2.0",
     "reflect-metadata": "^0.1.13",
     "regenerator-runtime": "0.13.7",
