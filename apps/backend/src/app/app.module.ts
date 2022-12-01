@@ -3,8 +3,6 @@
 import { Module } from '@nestjs/common';
 
 import { PrismaService } from './prisma.service';
-import { ProductController } from '../lib/products/product.controller';
-import { ProductService } from '../lib/products/product.service';
 import { CategoryController } from '../lib/category/category.controller';
 import { CategoryService } from '../lib/category/category.service';
 import { UserService } from '../lib/user/user.service';
@@ -23,7 +21,6 @@ import { EventService } from '../lib/event/event.service';
 @Module({
   imports: [],
   controllers: [
-    ProductController,
     CategoryController,
     UserController,
     ElementController,
@@ -34,7 +31,6 @@ import { EventService } from '../lib/event/event.service';
   ],
   providers: [
     PrismaService,
-    ProductService,
     CategoryService,
     UserService,
     ElementService,
