@@ -11,12 +11,14 @@ import {
 } from '@nestjs/common';
 import { UserService } from './user.service';
 import { User } from '@prisma/client';
+import { Roles, Unprotected } from 'nest-keycloak-connect';
 
 @Controller('user')
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
   @Get()
+  @Roles({ roles: ['app-admin'] })
   async getAllUser(): Promise<User[]> {
     return this.userService.getUser();
   }
