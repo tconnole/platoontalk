@@ -1,10 +1,7 @@
 // apps/api/src/app/app.module.ts
 
 import { Module } from '@nestjs/common';
-
 import { PrismaService } from './prisma.service';
-import { ProductController } from '../lib/products/product.controller';
-import { ProductService } from '../lib/products/product.service';
 import { CategoryController } from '../lib/category/category.controller';
 import { CategoryService } from '../lib/category/category.service';
 import { UserService } from '../lib/user/user.service';
@@ -19,11 +16,28 @@ import { SectionController } from '../lib/section/section.controller';
 import { SectionService } from '../lib/section/section.service';
 import { EventController } from '../lib/event/event.controller';
 import { EventService } from '../lib/event/event.service';
+import {
+  AuthGuard,
+  KeycloakConnectModule,
+  PolicyEnforcementMode,
+  RoleGuard,
+  TokenValidation,
+} from 'nest-keycloak-connect';
+import { APP_GUARD } from '@nestjs/core';
 
 @Module({
-  imports: [],
+  imports: [
+    KeycloakConnectModule.register({
+      authServerUrl: 'http://localhost:28080/auth',
+      realm: 'Demo-Realm',
+      clientId: 'nest-api',
+      secret: 'yU1jZK8VmefHOPZp9ALQoaUV0bPM1v0X',
+      logLevels: ['error'],
+      policyEnforcement: PolicyEnforcementMode.ENFORCING,
+      tokenValidation: TokenValidation.OFFLINE,
+    }),
+  ],
   controllers: [
-    ProductController,
     CategoryController,
     UserController,
     ElementController,
@@ -34,7 +48,14 @@ import { EventService } from '../lib/event/event.service';
   ],
   providers: [
     PrismaService,
-    ProductService,
+    {
+      provide: APP_GUARD,
+      useClass: AuthGuard, // Global Authentication Guard
+    },
+    {
+      provide: APP_GUARD,
+      useClass: RoleGuard, // Global Role Guard
+    },
     CategoryService,
     UserService,
     ElementService,
